@@ -9,7 +9,7 @@ def get_people(office):
 
     for num in range(1, 10):
         url = "https://jigsaw.thoughtworks.net/api/people?page=%s&staffing_office=" + office
-        headers = {"Authorization": ""}
+        headers = {"Authorization": "9d3e1770c607895d73e1107319143e2c"}
         result = requests.get(url %num, headers=headers)
         group = json.loads(result.text)
         people.extend(group)
